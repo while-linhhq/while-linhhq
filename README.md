@@ -1,26 +1,19 @@
 <!--
   GitHub profile: https://github.com/while-linhhq
-  Theme switch: ONLY works on Markdown images → ![alt](path#gh-light-mode-only)
-  (HTML <img> ignores the fragment → both light+dark show / raw tags leak)
+  Single visual set (no light/dark pairs) so each component shows exactly once.
 -->
 
 <div align="center">
 
-![Banner](./assets/banner-light.svg#gh-light-mode-only)
-![Banner](./assets/banner-dark.svg#gh-dark-mode-only)
+![Banner](./assets/banner.svg)
 
-![Typing](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=1D4ED8&center=true&vCenter=true&multiline=true&repeat=true&width=720&height=70&lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems#gh-light-mode-only)
-![Typing](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=60A5FA&center=true&vCenter=true&multiline=true&repeat=true&width=720&height=70&lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems#gh-dark-mode-only)
+![Typing](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=60A5FA&center=true&vCenter=true&multiline=true&repeat=true&width=720&height=70&lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems)
 
-![Focus](https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-1D4ED8?style=for-the-badge&labelColor=F1F5F9#gh-light-mode-only)
-![Mode](https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-0F172A?style=for-the-badge&labelColor=E2E8F0#gh-light-mode-only)
-![Collab](https://img.shields.io/badge/Open%20to-Collaboration-B45309?style=for-the-badge&labelColor=F1F5F9#gh-light-mode-only)
-![Focus](https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-60A5FA?style=for-the-badge&labelColor=0B1220#gh-dark-mode-only)
-![Mode](https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-E2E8F0?style=for-the-badge&labelColor=0B1220#gh-dark-mode-only)
-![Collab](https://img.shields.io/badge/Open%20to-Collaboration-E2B659?style=for-the-badge&labelColor=0B1220#gh-dark-mode-only)
+![Focus](https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-60A5FA?style=for-the-badge&labelColor=0B1220)
+![Mode](https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-E2E8F0?style=for-the-badge&labelColor=0B1220)
+![Collab](https://img.shields.io/badge/Open%20to-Collaboration-E2B659?style=for-the-badge&labelColor=0B1220)
 
-![wave](./assets/wave-light.svg#gh-light-mode-only)
-![wave](./assets/wave-dark.svg#gh-dark-mode-only)
+![wave](./assets/wave.svg)
 
 </div>
 
@@ -96,11 +89,10 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 
 <div align="center">
 
-![GitHub streak](./assets/streak-light.svg#gh-light-mode-only)
-![GitHub streak](./assets/streak-dark.svg#gh-dark-mode-only)
+<!-- Self-hosted static SVG (no opacity:0 animation) so numbers always render on GitHub -->
+![GitHub streak](./assets/streak.svg)
 
-![Contribution graph](https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&custom_title=Contributions&bg_color=f8fafc&color=1d4ed8&line=b45309&point=0f172a&area=true&hide_border=true&area_color=93c5fd#gh-light-mode-only)
-![Contribution graph](https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&custom_title=Contributions&bg_color=0b1220&color=60a5fa&line=e2b659&point=e2e8f0&area=true&hide_border=true&area_color=1e3a5f#gh-dark-mode-only)
+![Contribution graph](https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&custom_title=Contributions&bg_color=0b1220&color=60a5fa&line=e2b659&point=e2e8f0&area=true&hide_border=true&area_color=1e3a5f)
 
 </div>
 
@@ -123,13 +115,6 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 
 Open to collaboration on **offline desktop products**, **CV / edge analytics**, and **full-stack systems** under real constraints.
 
-![wave](./assets/wave-light.svg#gh-light-mode-only)
-![wave](./assets/wave-dark.svg#gh-dark-mode-only)
+![wave](./assets/wave.svg)
 
 </div>
-
-<sub>
-<div align="center">
-Light / dark via Markdown <code>#gh-*-mode-only</code> · streak self-hosted
-</div>
-</sub>

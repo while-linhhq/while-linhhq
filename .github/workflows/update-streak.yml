@@ -1,4 +1,4 @@
-# Refresh self-hosted light + dark streak SVGs (avoids GitHub camo timeout on demolab).
+# Refresh self-hosted streak SVG (static — no fade-in animation).
 name: Update streak card
 
 on:
@@ -19,44 +19,48 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch light + dark streak SVGs
+      - name: Fetch + staticize streak SVG
         run: |
           set -euo pipefail
           mkdir -p assets
-          light='https://streak-stats.demolab.com/?user=while-linhhq&theme=default&hide_border=true&background=F8FAFC&ring=1D4ED8&fire=B45309&currStreakNum=0F172A&sideNums=334155&sideLabels=64748B&dates=94A3B8&currStreakLabel=0F172A'
-          dark='https://streak-stats.demolab.com/?user=while-linhhq&theme=dark&hide_border=true&background=0B1220&ring=60A5FA&fire=E2B659&currStreakNum=E2B659&sideNums=CBD5E1&sideLabels=94A3B8&dates=64748B&currStreakLabel=E2E8F0'
-
-          fetch_one() {
-            local url="$1" out="$2"
-            local ok=0
-            for i in 1 2 3 4 5; do
-              if curl -fsSL --max-time 45 "$url" -o "${out}.tmp"; then
-                if head -c 200 "${out}.tmp" | grep -q '<svg'; then
-                  mv "${out}.tmp" "$out"
-                  ok=1
-                  break
-                fi
+          url='https://streak-stats.demolab.com/?user=while-linhhq&theme=dark&hide_border=true&background=0B1220&ring=60A5FA&fire=E2B659&currStreakNum=E2B659&sideNums=CBD5E1&sideLabels=94A3B8&dates=64748B&currStreakLabel=E2E8F0'
+          ok=0
+          for i in 1 2 3 4 5; do
+            if curl -fsSL --max-time 45 "$url" -o assets/streak.raw.svg; then
+              if head -c 200 assets/streak.raw.svg | grep -q '<svg'; then
+                ok=1
+                break
               fi
-              sleep $((i * 3))
-            done
-            [[ $ok -eq 1 ]] || { echo "Failed: $out"; exit 1; }
-            wc -c "$out"
-          }
+            fi
+            sleep $((i * 3))
+          done
+          [[ $ok -eq 1 ]] || { echo 'Failed to fetch streak SVG'; exit 1; }
 
-          fetch_one "$light" assets/streak-light.svg
-          fetch_one "$dark" assets/streak-dark.svg
-          # keep legacy path as dark alias for old links
-          cp assets/streak-dark.svg assets/streak.svg
+          # GitHub often does not run CSS animations → text left at opacity:0 looks "broken/wrong".
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          svg = Path('assets/streak.raw.svg').read_text(encoding='utf-8', errors='replace')
+          svg = re.sub(r'@keyframes\s+\w+\s*\{(?:[^{}]|\{[^{}]*\})*\}', '', svg, flags=re.S)
+          svg = re.sub(r'animation\s*:\s*[^;"\']+;?', '', svg, flags=re.I)
+          svg = re.sub(r'opacity\s*:\s*0(\.\d+)?\s*;?', 'opacity: 1;', svg, flags=re.I)
+          svg = re.sub(r'\s*style=([\'"])\s*\1', '', svg)
+          Path('assets/streak.svg').write_text(svg, encoding='utf-8')
+          assert '187' in svg or 'Total Contributions' in svg, 'missing expected streak content'
+          print('static streak bytes', len(svg))
+          PY
+          rm -f assets/streak.raw.svg
+          wc -c assets/streak.svg
 
       - name: Commit if changed
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/streak-light.svg assets/streak-dark.svg assets/streak.svg
+          git add assets/streak.svg
           if git diff --staged --quiet; then
             echo 'No streak change'
             exit 0
           fi
-          git commit -m "chore(profile): refresh light/dark streak cards"
+          git commit -m "chore(profile): refresh static streak card"
           git push
