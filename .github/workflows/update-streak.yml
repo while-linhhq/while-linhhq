@@ -1,9 +1,8 @@
-# Refresh self-hosted streak SVG so the profile never depends on GitHub camo + demolab latency.
+# Refresh self-hosted light + dark streak SVGs (avoids GitHub camo timeout on demolab).
 name: Update streak card
 
 on:
   schedule:
-    # ~twice a day
     - cron: '17 3,15 * * *'
   workflow_dispatch:
   push:
@@ -20,35 +19,44 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch streak SVG
+      - name: Fetch light + dark streak SVGs
         run: |
           set -euo pipefail
           mkdir -p assets
-          url='https://streak-stats.demolab.com/?user=while-linhhq&theme=dark&hide_border=true&background=0B1220&ring=3B82F6&fire=F2B01E&currStreakNum=F2B01E&sideNums=E2E8F0&sideLabels=94A3B8&dates=64748B&currStreakLabel=E2E8F0'
-          # retry a few times — service is sometimes slow
-          ok=0
-          for i in 1 2 3 4 5; do
-            if curl -fsSL --max-time 45 "$url" -o assets/streak.svg.tmp; then
-              if head -c 200 assets/streak.svg.tmp | grep -q '<svg'; then
-                mv assets/streak.svg.tmp assets/streak.svg
-                ok=1
-                break
+          light='https://streak-stats.demolab.com/?user=while-linhhq&theme=default&hide_border=true&background=F8FAFC&ring=1D4ED8&fire=B45309&currStreakNum=0F172A&sideNums=334155&sideLabels=64748B&dates=94A3B8&currStreakLabel=0F172A'
+          dark='https://streak-stats.demolab.com/?user=while-linhhq&theme=dark&hide_border=true&background=0B1220&ring=60A5FA&fire=E2B659&currStreakNum=E2B659&sideNums=CBD5E1&sideLabels=94A3B8&dates=64748B&currStreakLabel=E2E8F0'
+
+          fetch_one() {
+            local url="$1" out="$2"
+            local ok=0
+            for i in 1 2 3 4 5; do
+              if curl -fsSL --max-time 45 "$url" -o "${out}.tmp"; then
+                if head -c 200 "${out}.tmp" | grep -q '<svg'; then
+                  mv "${out}.tmp" "$out"
+                  ok=1
+                  break
+                fi
               fi
-            fi
-            sleep $((i * 3))
-          done
-          [[ $ok -eq 1 ]] || { echo 'Failed to fetch valid streak SVG'; exit 1; }
-          wc -c assets/streak.svg
+              sleep $((i * 3))
+            done
+            [[ $ok -eq 1 ]] || { echo "Failed: $out"; exit 1; }
+            wc -c "$out"
+          }
+
+          fetch_one "$light" assets/streak-light.svg
+          fetch_one "$dark" assets/streak-dark.svg
+          # keep legacy path as dark alias for old links
+          cp assets/streak-dark.svg assets/streak.svg
 
       - name: Commit if changed
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/streak.svg
+          git add assets/streak-light.svg assets/streak-dark.svg assets/streak.svg
           if git diff --staged --quiet; then
             echo 'No streak change'
             exit 0
           fi
-          git commit -m "chore(profile): refresh streak card"
+          git commit -m "chore(profile): refresh light/dark streak cards"
           git push

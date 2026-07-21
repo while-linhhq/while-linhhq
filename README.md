@@ -1,25 +1,38 @@
 <!--
   GitHub profile: https://github.com/while-linhhq
-  Special repo: while-linhhq/while-linhhq
+  Dual theme: append #gh-light-mode-only / #gh-dark-mode-only on image URLs.
 -->
 
 <div align="center">
 
-  <!-- Banner (static SVG in-repo — always works offline in markdown) -->
-  <img src="./assets/banner.svg" alt="Huỳnh Linh — Full-stack & systems" width="100%" />
+  <!-- Banner -->
+  <img src="./assets/banner-light.svg#gh-light-mode-only" alt="Huỳnh Linh — Full-stack & systems" width="100%" />
+  <img src="./assets/banner-dark.svg#gh-dark-mode-only" alt="Huỳnh Linh — Full-stack & systems" width="100%" />
 
-  <!-- Typing animation -->
   <br/>
 
-  [![Typing animation](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=3B82F6&center=true&vCenter=true&multiline=true&repeat=true&width=720&height=70&lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems)](https://git.io/typing-svg)
+  <!-- Typing (color matched to theme) -->
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=22&amp;duration=3200&amp;pause=900&amp;color=1D4ED8&amp;center=true&amp;vCenter=true&amp;multiline=true&amp;repeat=true&amp;width=720&amp;height=70&amp;lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems#gh-light-mode-only"
+    alt="Typing"
+  />
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=22&amp;duration=3200&amp;pause=900&amp;color=60A5FA&amp;center=true&amp;vCenter=true&amp;multiline=true&amp;repeat=true&amp;width=720&amp;height=70&amp;lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems#gh-dark-mode-only"
+    alt="Typing"
+  />
 
   <p>
-    <img src="https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-0F2744?style=for-the-badge&amp;labelColor=0B1220" alt="Focus"/>
-    <img src="https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-3B82F6?style=for-the-badge&amp;labelColor=0B1220" alt="Mode"/>
-    <img src="https://img.shields.io/badge/Open%20to-Collaboration-F2B01E?style=for-the-badge&amp;labelColor=0B1220&amp;color=F2B01E" alt="Open to collab"/>
+    <img src="https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-1D4ED8?style=for-the-badge&amp;labelColor=F1F5F9#gh-light-mode-only" alt="Focus" />
+    <img src="https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-0F172A?style=for-the-badge&amp;labelColor=E2E8F0#gh-light-mode-only" alt="Mode" />
+    <img src="https://img.shields.io/badge/Open%20to-Collaboration-B45309?style=for-the-badge&amp;labelColor=F1F5F9#gh-light-mode-only" alt="Collab" />
+
+    <img src="https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-60A5FA?style=for-the-badge&amp;labelColor=0B1220#gh-dark-mode-only" alt="Focus" />
+    <img src="https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-E2E8F0?style=for-the-badge&amp;labelColor=0B1220#gh-dark-mode-only" alt="Mode" />
+    <img src="https://img.shields.io/badge/Open%20to-Collaboration-E2B659?style=for-the-badge&amp;labelColor=0B1220#gh-dark-mode-only" alt="Collab" />
   </p>
 
-  <img src="./assets/wave.svg" width="100%" alt="" />
+  <img src="./assets/wave-light.svg#gh-light-mode-only" width="100%" alt="" />
+  <img src="./assets/wave-dark.svg#gh-dark-mode-only" width="100%" alt="" />
 
 </div>
 
@@ -37,7 +50,7 @@ Currently deep in **coach / sports tech**, **edge analytics (RTSP · YOLO · tra
 
 <div align="center">
 
-  ![Skill icons](https://skillicons.dev/icons?i=ts,js,python,react,nodejs,fastapi,postgres,redis,sqlite,docker,linux,git,pytorch,aws,vite,tailwind&perline=8)
+![Skill icons](https://skillicons.dev/icons?i=ts,js,python,react,nodejs,fastapi,postgres,redis,sqlite,docker,linux,git,pytorch,aws,vite,tailwind&perline=8)
 
 </div>
 
@@ -94,16 +107,27 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 ### Activity
 
 <!--
-  Streak is SELF-HOSTED (assets/streak.svg). External streak-stats.demolab.com
-  often times out behind GitHub's camo proxy → broken image on the profile.
-  Workflow .github/workflows/update-streak.yml refreshes the file on a schedule.
+  Streak self-hosted (light/dark) — demolab via camo is flaky.
+  Graph: themed URLs + #gh-*-mode-only.
 -->
 
 <div align="center">
 
-![GitHub streak](./assets/streak.svg)
+  <img src="./assets/streak-light.svg#gh-light-mode-only" alt="GitHub streak" />
+  <img src="./assets/streak-dark.svg#gh-dark-mode-only" alt="GitHub streak" />
 
-![Contribution graph](https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&bg_color=0b1220&color=3b82f6&line=f2b01e&point=e2e8f0&area=true&hide_border=true)
+  <br/><br/>
+
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&amp;custom_title=Contributions&amp;bg_color=f8fafc&amp;color=1d4ed8&amp;line=b45309&amp;point=0f172a&amp;area=true&amp;hide_border=true&amp;area_color=93c5fd#gh-light-mode-only"
+    alt="Contribution graph"
+    width="100%"
+  />
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&amp;custom_title=Contributions&amp;bg_color=0b1220&amp;color=60a5fa&amp;line=e2b659&amp;point=e2e8f0&amp;area=true&amp;hide_border=true&amp;area_color=1e3a5f#gh-dark-mode-only"
+    alt="Contribution graph"
+    width="100%"
+  />
 
 </div>
 
@@ -128,10 +152,15 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 
 </div>
 
-<img src="./assets/wave.svg" width="100%" alt="" />
+<br/>
 
-<sub align="center">
+<div align="center">
+  <img src="./assets/wave-light.svg#gh-light-mode-only" width="100%" alt="" />
+  <img src="./assets/wave-dark.svg#gh-dark-mode-only" width="100%" alt="" />
+</div>
+
+<sub>
   <div align="center">
-    Profile assets in-repo (banner · streak) · widgets: typing · skillicons · activity graph
+    Light / dark via GitHub theme · palette: slate + blue + amber · streak self-hosted
   </div>
 </sub>
