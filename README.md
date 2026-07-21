@@ -8,19 +8,15 @@
   <!-- Banner (static SVG in-repo — always works offline in markdown) -->
   <img src="./assets/banner.svg" alt="Huỳnh Linh — Full-stack & systems" width="100%" />
 
-  <!-- Typing animation (third-party SVG service; falls back as image) -->
+  <!-- Typing animation -->
   <br/>
-  <a href="https://git.io/typing-svg">
-    <img
-      src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=3B82F6&center=true&vCenter=true&multiline=true&repeat=true&width=720&height=70&lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems"
-      alt="Typing animation"
-    />
-  </a>
+
+  [![Typing animation](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=3B82F6&center=true&vCenter=true&multiline=true&repeat=true&width=720&height=70&lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems)](https://git.io/typing-svg)
 
   <p>
-    <img src="https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-0F2744?style=for-the-badge&labelColor=0B1220" alt="Focus"/>
-    <img src="https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-3B82F6?style=for-the-badge&labelColor=0B1220" alt="Mode"/>
-    <img src="https://img.shields.io/badge/Open%20to-Collaboration-F2B01E?style=for-the-badge&labelColor=0B1220&color=F2B01E" alt="Open to collab"/>
+    <img src="https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-0F2744?style=for-the-badge&amp;labelColor=0B1220" alt="Focus"/>
+    <img src="https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-3B82F6?style=for-the-badge&amp;labelColor=0B1220" alt="Mode"/>
+    <img src="https://img.shields.io/badge/Open%20to-Collaboration-F2B01E?style=for-the-badge&amp;labelColor=0B1220&amp;color=F2B01E" alt="Open to collab"/>
   </p>
 
   <img src="./assets/wave.svg" width="100%" alt="" />
@@ -41,11 +37,7 @@ Currently deep in **coach / sports tech**, **edge analytics (RTSP · YOLO · tra
 
 <div align="center">
 
-  <!-- Skill icons — compact icon strip used widely on pro profiles -->
-  <img
-    src="https://skillicons.dev/icons?i=ts,js,python,react,nodejs,fastapi,postgres,redis,sqlite,docker,linux,git,pytorch,aws,vite,tailwind&perline=8"
-    alt="Skill icons"
-  />
+  ![Skill icons](https://skillicons.dev/icons?i=ts,js,python,react,nodejs,fastapi,postgres,redis,sqlite,docker,linux,git,pytorch,aws,vite,tailwind&perline=8)
 
 </div>
 
@@ -99,24 +91,19 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 
 ---
 
-### Metrics
+### Activity
+
+<!--
+  Use Markdown images (not raw HTML) for multi-param widget URLs.
+  In HTML <img src>, bare & breaks the attribute — GitHub then shows a broken image.
+-->
 
 <div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=while-linhhq&show_icons=true&theme=radical&hide_border=true&bg_color=0B1220&title_color=F2B01E&icon_color=3B82F6&text_color=E2E8F0&count_private=true" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=while-linhhq&layout=compact&theme=radical&hide_border=true&bg_color=0B1220&title_color=F2B01E&text_color=E2E8F0" alt="Top languages" />
-</div>
 
-<br/>
+![GitHub streak](https://streak-stats.demolab.com/?user=while-linhhq&theme=dark&hide_border=true&background=0B1220&ring=3B82F6&fire=F2B01E&currStreakNum=F2B01E&sideNums=E2E8F0&sideLabels=94A3B8&dates=64748B&currStreakLabel=E2E8F0)
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=while-linhhq&theme=radical&hide_border=true&background=0B1220&ring=3B82F6&fire=F2B01E&currStreakLabel=E2E8F0" alt="GitHub streak" />
-</div>
+![Contribution graph](https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&bg_color=0b1220&color=3b82f6&line=f2b01e&point=e2e8f0&area=true&hide_border=true)
 
-<br/>
-
-<div align="center">
-  <!-- Activity graph (contribution snake-style line chart) -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&bg_color=0b1220&color=3b82f6&line=f2b01e&point=e2e8f0&area=true&hide_border=true" alt="Contribution graph" width="100%" />
 </div>
 
 ---
@@ -144,6 +131,6 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 
 <sub align="center">
   <div align="center">
-    Profile assets live in this repo · widgets use public SVG services (stats / typing / skillicons / activity graph)
+    Profile assets live in this repo · widgets: typing · skillicons · streak · activity graph
   </div>
 </sub>
