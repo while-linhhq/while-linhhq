@@ -94,13 +94,14 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 ### Activity
 
 <!--
-  Use Markdown images (not raw HTML) for multi-param widget URLs.
-  In HTML <img src>, bare & breaks the attribute — GitHub then shows a broken image.
+  Streak is SELF-HOSTED (assets/streak.svg). External streak-stats.demolab.com
+  often times out behind GitHub's camo proxy → broken image on the profile.
+  Workflow .github/workflows/update-streak.yml refreshes the file on a schedule.
 -->
 
 <div align="center">
 
-![GitHub streak](https://streak-stats.demolab.com/?user=while-linhhq&theme=dark&hide_border=true&background=0B1220&ring=3B82F6&fire=F2B01E&currStreakNum=F2B01E&sideNums=E2E8F0&sideLabels=94A3B8&dates=64748B&currStreakLabel=E2E8F0)
+![GitHub streak](./assets/streak.svg)
 
 ![Contribution graph](https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&bg_color=0b1220&color=3b82f6&line=f2b01e&point=e2e8f0&area=true&hide_border=true)
 
@@ -131,6 +132,6 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 
 <sub align="center">
   <div align="center">
-    Profile assets live in this repo · widgets: typing · skillicons · streak · activity graph
+    Profile assets in-repo (banner · streak) · widgets: typing · skillicons · activity graph
   </div>
 </sub>

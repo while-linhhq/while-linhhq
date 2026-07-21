@@ -1,0 +1,54 @@
+# Refresh self-hosted streak SVG so the profile never depends on GitHub camo + demolab latency.
+name: Update streak card
+
+on:
+  schedule:
+    # ~twice a day
+    - cron: '17 3,15 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-streak.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch streak SVG
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          url='https://streak-stats.demolab.com/?user=while-linhhq&theme=dark&hide_border=true&background=0B1220&ring=3B82F6&fire=F2B01E&currStreakNum=F2B01E&sideNums=E2E8F0&sideLabels=94A3B8&dates=64748B&currStreakLabel=E2E8F0'
+          # retry a few times — service is sometimes slow
+          ok=0
+          for i in 1 2 3 4 5; do
+            if curl -fsSL --max-time 45 "$url" -o assets/streak.svg.tmp; then
+              if head -c 200 assets/streak.svg.tmp | grep -q '<svg'; then
+                mv assets/streak.svg.tmp assets/streak.svg
+                ok=1
+                break
+              fi
+            fi
+            sleep $((i * 3))
+          done
+          [[ $ok -eq 1 ]] || { echo 'Failed to fetch valid streak SVG'; exit 1; }
+          wc -c assets/streak.svg
+
+      - name: Commit if changed
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/streak.svg
+          if git diff --staged --quiet; then
+            echo 'No streak change'
+            exit 0
+          fi
+          git commit -m "chore(profile): refresh streak card"
+          git push
