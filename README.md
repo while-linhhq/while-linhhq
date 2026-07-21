@@ -1,38 +1,26 @@
 <!--
   GitHub profile: https://github.com/while-linhhq
-  Dual theme: append #gh-light-mode-only / #gh-dark-mode-only on image URLs.
+  Theme switch: ONLY works on Markdown images → ![alt](path#gh-light-mode-only)
+  (HTML <img> ignores the fragment → both light+dark show / raw tags leak)
 -->
 
 <div align="center">
 
-  <!-- Banner -->
-  <img src="./assets/banner-light.svg#gh-light-mode-only" alt="Huỳnh Linh — Full-stack & systems" width="100%" />
-  <img src="./assets/banner-dark.svg#gh-dark-mode-only" alt="Huỳnh Linh — Full-stack & systems" width="100%" />
+![Banner](./assets/banner-light.svg#gh-light-mode-only)
+![Banner](./assets/banner-dark.svg#gh-dark-mode-only)
 
-  <br/>
+![Typing](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=1D4ED8&center=true&vCenter=true&multiline=true&repeat=true&width=720&height=70&lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems#gh-light-mode-only)
+![Typing](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=60A5FA&center=true&vCenter=true&multiline=true&repeat=true&width=720&height=70&lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems#gh-dark-mode-only)
 
-  <!-- Typing (color matched to theme) -->
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=22&amp;duration=3200&amp;pause=900&amp;color=1D4ED8&amp;center=true&amp;vCenter=true&amp;multiline=true&amp;repeat=true&amp;width=720&amp;height=70&amp;lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems#gh-light-mode-only"
-    alt="Typing"
-  />
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=22&amp;duration=3200&amp;pause=900&amp;color=60A5FA&amp;center=true&amp;vCenter=true&amp;multiline=true&amp;repeat=true&amp;width=720&amp;height=70&amp;lines=Building+offline-first+products;Real-time+vision+%26+edge+pipelines;TypeScript+%C2%B7+Python+%C2%B7+GPU+systems#gh-dark-mode-only"
-    alt="Typing"
-  />
+![Focus](https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-1D4ED8?style=for-the-badge&labelColor=F1F5F9#gh-light-mode-only)
+![Mode](https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-0F172A?style=for-the-badge&labelColor=E2E8F0#gh-light-mode-only)
+![Collab](https://img.shields.io/badge/Open%20to-Collaboration-B45309?style=for-the-badge&labelColor=F1F5F9#gh-light-mode-only)
+![Focus](https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-60A5FA?style=for-the-badge&labelColor=0B1220#gh-dark-mode-only)
+![Mode](https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-E2E8F0?style=for-the-badge&labelColor=0B1220#gh-dark-mode-only)
+![Collab](https://img.shields.io/badge/Open%20to-Collaboration-E2B659?style=for-the-badge&labelColor=0B1220#gh-dark-mode-only)
 
-  <p>
-    <img src="https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-1D4ED8?style=for-the-badge&amp;labelColor=F1F5F9#gh-light-mode-only" alt="Focus" />
-    <img src="https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-0F172A?style=for-the-badge&amp;labelColor=E2E8F0#gh-light-mode-only" alt="Mode" />
-    <img src="https://img.shields.io/badge/Open%20to-Collaboration-B45309?style=for-the-badge&amp;labelColor=F1F5F9#gh-light-mode-only" alt="Collab" />
-
-    <img src="https://img.shields.io/badge/Focus-Full--stack%20%26%20Systems-60A5FA?style=for-the-badge&amp;labelColor=0B1220#gh-dark-mode-only" alt="Focus" />
-    <img src="https://img.shields.io/badge/Mode-Local--first%20%7C%20Edge-E2E8F0?style=for-the-badge&amp;labelColor=0B1220#gh-dark-mode-only" alt="Mode" />
-    <img src="https://img.shields.io/badge/Open%20to-Collaboration-E2B659?style=for-the-badge&amp;labelColor=0B1220#gh-dark-mode-only" alt="Collab" />
-  </p>
-
-  <img src="./assets/wave-light.svg#gh-light-mode-only" width="100%" alt="" />
-  <img src="./assets/wave-dark.svg#gh-dark-mode-only" width="100%" alt="" />
+![wave](./assets/wave-light.svg#gh-light-mode-only)
+![wave](./assets/wave-dark.svg#gh-dark-mode-only)
 
 </div>
 
@@ -106,28 +94,13 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 
 ### Activity
 
-<!--
-  Streak self-hosted (light/dark) — demolab via camo is flaky.
-  Graph: themed URLs + #gh-*-mode-only.
--->
-
 <div align="center">
 
-  <img src="./assets/streak-light.svg#gh-light-mode-only" alt="GitHub streak" />
-  <img src="./assets/streak-dark.svg#gh-dark-mode-only" alt="GitHub streak" />
+![GitHub streak](./assets/streak-light.svg#gh-light-mode-only)
+![GitHub streak](./assets/streak-dark.svg#gh-dark-mode-only)
 
-  <br/><br/>
-
-  <img
-    src="https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&amp;custom_title=Contributions&amp;bg_color=f8fafc&amp;color=1d4ed8&amp;line=b45309&amp;point=0f172a&amp;area=true&amp;hide_border=true&amp;area_color=93c5fd#gh-light-mode-only"
-    alt="Contribution graph"
-    width="100%"
-  />
-  <img
-    src="https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&amp;custom_title=Contributions&amp;bg_color=0b1220&amp;color=60a5fa&amp;line=e2b659&amp;point=e2e8f0&amp;area=true&amp;hide_border=true&amp;area_color=1e3a5f#gh-dark-mode-only"
-    alt="Contribution graph"
-    width="100%"
-  />
+![Contribution graph](https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&custom_title=Contributions&bg_color=f8fafc&color=1d4ed8&line=b45309&point=0f172a&area=true&hide_border=true&area_color=93c5fd#gh-light-mode-only)
+![Contribution graph](https://github-readme-activity-graph.vercel.app/graph?username=while-linhhq&custom_title=Contributions&bg_color=0b1220&color=60a5fa&line=e2b659&point=e2e8f0&area=true&hide_border=true&area_color=1e3a5f#gh-dark-mode-only)
 
 </div>
 
@@ -145,22 +118,18 @@ Admin UI + GPU OCR pipelines, Dockerized Postgres-backed services.
 
 <div align="center">
 
-  [![GitHub](https://img.shields.io/badge/GitHub-while--linhhq-181717?style=for-the-badge&logo=github)](https://github.com/while-linhhq)
-  [![Email](https://img.shields.io/badge/Email-hql.0812.dlp%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hql.0812.dlp@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-while--linhhq-181717?style=for-the-badge&logo=github)](https://github.com/while-linhhq)
+[![Email](https://img.shields.io/badge/Email-hql.0812.dlp%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hql.0812.dlp@gmail.com)
 
-  Open to collaboration on **offline desktop products**, **CV / edge analytics**, and **full-stack systems** under real constraints.
+Open to collaboration on **offline desktop products**, **CV / edge analytics**, and **full-stack systems** under real constraints.
 
-</div>
+![wave](./assets/wave-light.svg#gh-light-mode-only)
+![wave](./assets/wave-dark.svg#gh-dark-mode-only)
 
-<br/>
-
-<div align="center">
-  <img src="./assets/wave-light.svg#gh-light-mode-only" width="100%" alt="" />
-  <img src="./assets/wave-dark.svg#gh-dark-mode-only" width="100%" alt="" />
 </div>
 
 <sub>
-  <div align="center">
-    Light / dark via GitHub theme · palette: slate + blue + amber · streak self-hosted
-  </div>
+<div align="center">
+Light / dark via Markdown <code>#gh-*-mode-only</code> · streak self-hosted
+</div>
 </sub>
