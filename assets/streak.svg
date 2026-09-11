@@ -26,7 +26,7 @@
                 <!-- Total Contributions big number -->
                 <g transform='translate(82.5, 48)'>
                     <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#cbd5e1' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='28px' font-style='normal' style='opacity: 1; '>
-                        195
+                        192
                     </text>
                 </g>
 
@@ -40,7 +40,7 @@
                 <!-- Total Contributions range -->
                 <g transform='translate(82.5, 114)'>
                     <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#64748b' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='12px' font-style='normal' style='opacity: 1; '>
-                        Sep 12, 2023 - Present
+                        Nov 30, 2025 - Present
                     </text>
                 </g>
             </g>
